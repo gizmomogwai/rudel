@@ -1,0 +1,2 @@
+#!/bin/sh
+$EMACS -nw -q --load ~/.rudel/init.el --debug-init
