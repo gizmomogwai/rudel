@@ -1,2 +1,2 @@
-#!/bin/sh
-$EMACS -nw -q --load ~/.rudel/init.el --debug-init
+#!/bin/bash
+$EMACS -nw -q --load $(dirname "$0")/init.el --debug-init

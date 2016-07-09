@@ -1,2 +1,2 @@
 #!/bin/sh
-$EMACS --daemon -nw -q --load ~/.rudel/init-server.el
+$EMACS --daemon -nw -q --load $(dirname "$0")/init-server.el

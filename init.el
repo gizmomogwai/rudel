@@ -1,11 +1,13 @@
 (setq user-init-file (or load-file-name (buffer-file-name)))
-(setq user-emacs-directory (file-name-directory user-init-file))
+(setq base (file-name-directory user-init-file))
+(setq user-emacs-directory base)
 
-(add-to-list 'load-path "~/.emacs.d/rudel")
-(add-to-list 'load-path "~/.emacs.d/rudel/obby")
-(add-to-list 'load-path "~/.emacs.d/rudel/jupiter")
-(add-to-list 'load-path "~/.emacs.d/rudel/socket")
-(add-to-list 'load-path "~/.emacs.d/rudel/tls")
+(add-to-list 'load-path (format "%srudel" base))
+(add-to-list 'load-path (format "%srudel/obby" base))
+(add-to-list 'load-path (format "%srudel/jupiter" base))
+(add-to-list 'load-path (format "%srudel/socket" base))
+(add-to-list 'load-path (format "%srudel/tls" base))
+
 (require 'rudel)
 (require 'rudel-obby-server)
 (require 'rudel-interactive)
@@ -14,4 +16,3 @@
 (require 'rudel-backend)
 (require 'rudel-obby)
 (require 'rudel-socket)
-
